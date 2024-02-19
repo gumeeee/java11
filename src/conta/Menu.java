@@ -1,26 +1,26 @@
 package conta;
 
+import java.util.Scanner;
+
 import conta.model.Conta;
 
 public class Menu {
 
 	public static void main(String[] args) {
-		Conta contaBancaria = new Conta();
-		
-		contaBancaria.setNumero(352);
-		contaBancaria.setAgencia(8);
-		contaBancaria.setSaldo(35222);
-		contaBancaria.setTipo("Corrente");
-		contaBancaria.setTitular("Guilherme");
-		
-		System.out.println("Numero da conta: " + contaBancaria.getNumero());
-		
-		System.out.println("Agencia da conta: " + contaBancaria.getAgencia());
-		
-		System.out.println("Salda da conta: " + contaBancaria.getSaldo());
-		
-		System.out.println("Tipo da conta: " + contaBancaria.getTipo());
-		
-		System.out.println("Titular da conta: " + contaBancaria.getTitular());
+		Scanner sc = new Scanner(System.in);
+		Conta conta1 = new Conta(1, 123, 1, "Guilherme Moura", 50000.0f);
+
+		conta1.extrato();
+		System.out.println("\n");
+
+		if (conta1.sacar(100))
+			System.out.println("Saque efetuado com sucesso. O novo saldo é de: " + conta1.getSaldo());
+		else
+			System.out.println("Saldo insuficiante!!");
+
+		conta1.depositar(1000);
+		System.out.println("O saldo atual após depósito é: " + conta1.getSaldo());
+
+		sc.close();
 	}
 }
