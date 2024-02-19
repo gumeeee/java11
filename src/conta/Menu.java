@@ -1,4 +1,4 @@
-package application;
+package conta;
 
 import conta.model.Conta;
 
