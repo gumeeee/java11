@@ -27,4 +27,12 @@ public class ContaCorrente extends ContaBancaria {
 		return true;
 	}
 
+	@Override
+	public void extrato() {
+		super.extrato();
+		System.out.println("Limite da conta: " + this.limite);
+	}
+	
+	
+
 }
