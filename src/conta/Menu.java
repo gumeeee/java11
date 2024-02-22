@@ -11,5 +11,7 @@ public class Menu {
 		contaCorrente.sacar(2000);
 		System.out.println("Saldo após saque: " + contaCorrente.getSaldo());
 		
+		contaCorrente.extrato();
+		
 	}
 }

@@ -72,6 +72,17 @@ public abstract class ContaBancaria {
 	public void depositar(float valor) {
 		this.setSaldo(this.getSaldo() + valor);
 	}
+	
+	public boolean transferir(ContaBancaria destino, float valor) {
+		if(this.sacar(valor)) {
+			destino.depositar(valor);
+			System.out.println("Transferência concluida!");
+			return true;
+		} else {
+			System.out.println("Transferência falhou. Verifique o saldo.");
+			return false;
+		}
+	}
 
 	public void extrato() {
 

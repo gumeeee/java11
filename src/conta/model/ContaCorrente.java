@@ -2,6 +2,17 @@ package conta.model;
 
 public class ContaCorrente extends ContaBancaria {
 	private float limite;
+	
+	
+
+	public ContaCorrente() {
+		super();
+	}
+
+	public ContaCorrente(int numero, int agencia, int tipo, String titular, float saldo) {
+		super(numero, agencia, tipo, titular, saldo);
+		// TODO Auto-generated constructor stub
+	}
 
 	public ContaCorrente(int numero, int agencia, int tipo, String titular, float saldo, float limite) {
 		super(numero, agencia, tipo, titular, saldo);
