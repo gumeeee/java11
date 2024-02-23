@@ -16,8 +16,8 @@ public class Menu {
 
 		Scanner leia = new Scanner(System.in);
 
-		int opcao, numero, agencia, tipo, aniversario;
-		float saldo, limite;
+		int opcao, numero, agencia, tipo, aniversario, numeroDestino;
+		float saldo, limite, valor;
 		String titular;
 
 		while (true) {
@@ -121,16 +121,50 @@ public class Menu {
 			case 6:
 				System.out.println("\n Sacar");
 
+				System.out.print("Digite o número da conta: ");
+				numero = leia.nextInt();
+				
+				do {
+					System.out.print("Digite o valor do Saque: ");
+					valor = leia.nextFloat();
+					
+				} while(valor <= 0);
+				
+				contas.sacar(numero, valor);
+				
 				keyPress();
 				break;
 			case 7:
 				System.out.println("\n Depositar");
+				
+				System.out.print("Digite o número da conta: ");
+				numero = leia.nextInt();
+				
+				do {
+					System.out.print("Digite o valor de Depósito: ");
+					valor = leia.nextFloat();
+					
+				} while(valor <= 0);
+				
+				contas.depositar(numero, valor);
 
 				keyPress();
 				break;
 			case 8:
 				System.out.println("\n Transferir");
+				
+				System.out.print("Digite o número da conta de origem: ");
+				numero = leia.nextInt();
+				
+				System.out.print("Digite o número da conta de destino: ");
+				numeroDestino = leia.nextInt();
 
+				do {
+					System.out.print("Digite o valor de sua Transferência: ");
+					valor = leia.nextFloat();
+					
+				}while(valor <= 0);
+				
 				keyPress();
 				break;
 			default:
