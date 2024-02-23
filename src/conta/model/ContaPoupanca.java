@@ -1,9 +1,7 @@
 package conta.model;
 
-public class ContaPoupanca extends ContaBancaria{
+public class ContaPoupanca extends ContaBancaria {
 	private int aniversario;
-	
-	
 
 	public ContaPoupanca() {
 		super();
@@ -26,9 +24,8 @@ public class ContaPoupanca extends ContaBancaria{
 	@Override
 	public void extrato() {
 		super.extrato();
-		
+
 		System.out.println("Aniversário: " + this.aniversario);
 	}
-	
-	
+
 }

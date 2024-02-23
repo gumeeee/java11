@@ -16,11 +16,10 @@ public interface ContaRepository {
 	public void deletar(int numero);
 
 	// Métodos bancarios
-	// Implementar na ContaBancaria
 
-	public boolean sacar(int numero, float valor);
+	public void sacar(int numero, float valor);
 
 	public void depositar(int numero, float valor);
 
-	public boolean transferir(int numeroOrigem, int numeroDestino, float valor);
+	public void transferir(int numeroOrigem, int numeroDestino, float valor);
 }
