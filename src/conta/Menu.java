@@ -65,6 +65,9 @@ public class Menu {
 				System.out.print("\nDigite o Número da Agência: ");
 				agencia = leia.nextInt();
 
+				System.out.println("Número da conta: ");
+				numero = leia.nextInt();
+				
 				System.out.print("Digite o nome do Titular da conta: ");
 				leia.skip("\\R");
 				titular = leia.nextLine();
@@ -81,13 +84,13 @@ public class Menu {
 				case 1:
 					System.out.print("Digite o Limite de Crédito da conta: ");
 					limite = leia.nextFloat();
-					contas.cadastrar(new ContaCorrente(contas.gerarNumero(), agencia, tipo, titular, saldo, limite));
+					contas.cadastrar(new ContaCorrente(numero, agencia, tipo, titular, saldo, limite));
 					
 					break;
 				case 2:
 					System.out.print("Digite o dia do Aniversario da Conta: ");
 					aniversario = leia.nextInt();
-					contas.cadastrar(new ContaPoupanca(contas.gerarNumero(), agencia, tipo, titular, saldo, aniversario));
+					contas.cadastrar(new ContaPoupanca(numero, agencia, tipo, titular, saldo, aniversario));
 					break;
 				} 
 				

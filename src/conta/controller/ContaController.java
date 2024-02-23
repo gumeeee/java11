@@ -66,10 +66,5 @@ public class ContaController implements ContaRepository {
 		// TODO Auto-generated method stub
 
 	}
-	
-	public int gerarNumero() {
-		return ++ numero;
-				
-	}
 
 }
